@@ -56,16 +56,16 @@ alert("Large");
 //while
 var number = 0;
 while (number <= 12) {//if is true.
-console.log(number);//do this
-number = number + 2;
+ console.log(number);//do this
+ number = number + 2;
 }
 //0
 //2..
 var result = 1;
 var counter = 0;
 while (counter < 10) {
-result = result * 2;
-counter = counter + 1;
+ result = result * 2;
+ counter = counter + 1;
 }
 console.log(result);
 //1024
@@ -76,7 +76,7 @@ console.log(result);
 //testing whether it should stop only after that first execution. To reflect this,
 //the test appears after the body of the loop:
 do {
-var name = prompt("Who are you?");
+ var name = prompt("Who are you?");
 } while (!name);
 console.log(name);
 //all strings except "" convert to true .

@@ -1,0 +1,8 @@
+var entrada=22;
+var string="";
+for (var count = 0; count < (entrada/2); count = count + 1){
+	string=string+"# # # # "+"\n"+
+       " # # # #"+"\n" ;  
+}   
+console.log(string);
+
