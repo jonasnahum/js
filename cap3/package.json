@@ -1,0 +1,16 @@
+{
+  "name": "cap3",
+  "version": "0.1.0",
+  "description": "programa de capitulo1",
+  "main": "3functions.js",
+  "scripts": {
+    "test": "nodejs --harmony $(which nodeunit) test/"
+  },
+  "keywords": [
+    "capitulo3",
+    "ejercicios",
+    "java"
+  ],
+  "author": "jonas",
+  "license": "BSD-2-Clause"
+}
