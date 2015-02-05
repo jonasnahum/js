@@ -4,7 +4,7 @@
   "description": "programa de capitulo1",
   "main": "3functions.js",
   "scripts": {
-    "test": "nodejs --harmony $(which nodeunit) test/"
+    "test": "nodejs --harmony $(which nodeunit) test3/"
   },
   "keywords": [
     "capitulo3",

@@ -13,13 +13,15 @@ exports.min=function(test){
 };
 
 exports.isEven=function(test){
-        test.expect(1);
+        test.expect(2);
 //arrange
         var number=15;
 //act
         var pruebaUno = capitulo3.isEven(number);
 //assert
         test.equal(pruebaUno,false,"es falso que 15 es even");
+
+        test.equal(capitulo3.isEven(-16), true, "-16 es numero par negativo");
         test.done();
 };
 

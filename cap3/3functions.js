@@ -7,26 +7,25 @@ exports.min=function(a,b){
     return b;
   };
 };
-//var result=min(10,5);
-//console.log(result);
-
 
 exports.isEven=function(number){
   function decrementar(nu){
-    if(nu==1||nu==-1){
+    if(nu==1){
       return false;
     }
     if(nu==0){
       return true;
     }  
-    else{
-      return decrementar(nu-2);
+    else {
+      let esNegativo = nu < 0;
+      if (esNegativo)
+        return decrementar(nu + 2);
+      else 
+        return decrementar(nu - 2);
     }
   }
 return decrementar(number);
 }
-//var result=isEven(-1);
-//console.log(result);
 
 
 exports.countBs=function(texto){
@@ -46,9 +45,6 @@ exports.countBs=function(texto){
 
   return cuentaB;
 }
-//var imprimir= countBs("BetoelBoticariotieneunBurro");
-//console.log(imprimir);
-
 
 
 
