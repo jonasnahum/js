@@ -1,0 +1,16 @@
+{
+  "name": "arrays",
+  "version": "0.1.0",
+  "description": "ejercicos del ejercicio 4",
+  "main": "arrays.js",
+  "scripts": {
+    "test": "node --harmony $(which nodeunit) test4/"
+  },
+  "keywords": [
+    "ejercicos",
+    "cap",
+    "4"
+  ],
+  "author": "jonas",
+  "license": "ISC"
+}
