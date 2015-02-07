@@ -35,71 +35,50 @@ exports.sum = function(numbers){
 }
 
 exports.reverseArray = function (arreglo ){
- var newArray = arreglo.reverse();
- return newArray;
+var newArray = arreglo.reverse();
+return newArray;
 }
 exports.reverseArrayInPlace = function(arreglo){
 return arreglo.reverse();
 }
 
+exports.arrayToList = function (arreglo){
+  var arrayAlreves=arreglo.reverse();
+  var list;
+  for (var count = 0; count < arrayAlreves.length; count++){
+    list= {value: arrayAlreves[count], rest:list};
+  }
+  return list;
+}
 
-//var arrayToList = function (arreglo){
-//  var arrayAlreves=arreglo.reverse();
-//  var list;
-//  for (var count = 0; count < arrayAlreves.length; count++){
-//    list= {value: arrayAlreves[count], rest:list};
-//  }
-//  return list;
-//}
-//var arreglo=[1,2,3];
-//var listObject=arrayToList(arreglo);
-//console.log(listObject);
+exports.listToArray= function(list){
+  var arreglo=[];
+    
+    for(var node=list; node; node=node.rest){
+        arreglo.push(node.value);//node tiene solo un value. en node.rest hay otro value.  
+    }
+    
+return arreglo;
+}
 
+exports.prepend = function (value, list){//recibe un elemento y una lista y pone el elemento en frente de lista.
+  var newList = {value: value, rest: list};
+  return newList;
+}
 
-//var listToArray= function(listObject){
-//  var arreglo=[];
-//    for(var node=listObject; node; node=node.rest){
-//        arreglo.push(node);//node tiene solo un value. en node.rest hay otro value.  
-//    }  
- //return arreglo;
-//}
-//var result = listToArray(listObject);
-//console.log(result);
-
-//var prepend = function (value, list){//recibe un elemento y una lista y pone el elemento en frente de lista.
-//  var newList = {value: value, rest: list};
-//  return newList;
-//}
-//var list = {
-//  value: 1,
-//  rest: {
-//    value: 2,
-//    rest:{
-//      value: 3,
-//      rest: null
-//         }
- //}
-//};
-//var value = "nada";
-//var result = prepend(value,list);
-//console.log(result);
-
-//var nth = function(list, n) {//returns the element at given position in the list.
-////  if (!list)
-////    return undefined;
-////  else if (n == 0)
-////    return list.value;
-////  else
-////    return nth(list.rest, n - 1);
-//  for(var varObj=list; varObj; varObj=varObj.rest){
-//    if (n == 0)
-//    return varObj.value;
-//    n--;
-//  }  
-//}
-//var list = {value: 1,rest: {value: 2,rest:{value: 3,rest: null}}};
-//var result=nth(list,1);
-
+exports.nth = function(list, n) {//returns the element at given position in the list.
+//  if (!list)
+//    return undefined;
+//  else if (n == 0)
+//    return list.value;
+//  else
+//    return nth(list.rest, n - 1);
+  for(var varObj=list; varObj; varObj=varObj.rest){
+    if (n == 0)
+    return varObj.value;
+    n--;
+  }  
+}
 
 //takes two values and returns true only if they are the same value or are objects with the same properties whose valuesare also equal when compared with a recursive call to deepEqual .
 // function deepEqual(a, b) {

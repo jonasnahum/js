@@ -87,3 +87,61 @@ exports.testReverseArrayInPlace= function(test){
     test.deepEqual(pruebaUno,expected,"probando el arrray en reverse");
     test.done();
 }
+exports.arrayToList = function(test){
+    test.expect(1);
+    
+    //arrange
+    var arreglo=[1,2,3];
+    var expected = { value: 1, rest: { value: 2, rest: { value: 3, rest: undefined } } };         
+    
+    //act
+    var pruebaUno = ejercicios.arrayToList(arreglo);
+    
+    //assert
+    test.deepEqual(pruebaUno,expected,"probando arrayToList");
+    test.done();
+}
+exports.listToArray = function(test){
+    test.expect(1);
+    
+    //arrange
+    var list={ value: 1, rest: { value: 2, rest: { value: 3, rest: undefined } } };
+    var expected = [1,2,3];          
+    
+    //act
+    var pruebaUno = ejercicios.listToArray(list);
+
+    //assert
+    test.deepEqual(pruebaUno,expected,"probando listToArray");
+    test.done();
+}
+exports.prepend = function(test){
+    test.expect(1);
+    
+    //arrange
+    var list={ value: 1, rest: { value: 2, rest: { value: 3, rest: undefined } } };
+    var elemento = 0;
+    var expected ={value: 0, rest: { value: 1, rest: { value: 2, rest: { value: 3, rest: undefined } } }};           
+    
+    //act
+    var pruebaUno = ejercicios.prepend(elemento,list);
+
+    //assert
+    test.deepEqual(pruebaUno,expected,"prepend poner el elemento al frente de la lista");
+    test.done();
+}
+exports.nth = function(test){
+    test.expect(1);
+    
+    //arrange
+    var list={ value: 1, rest: { value: 2, rest: { value: 3, rest: undefined } } };
+    var n = 1;
+    var expected = 2;           
+    
+    //act
+    var pruebaUno = ejercicios.nth(list, n);
+
+    //assert
+    test.equal(pruebaUno,expected,"nth, buscando elemento en la posicion n de la lista");
+    test.done();
+}
