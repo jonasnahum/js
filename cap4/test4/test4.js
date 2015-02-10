@@ -145,3 +145,36 @@ exports.nth = function(test){
     test.equal(pruebaUno,expected,"nth, buscando elemento en la posicion n de la lista");
     test.done();
 }
+exports.deepEqualElMismoObjeto = function(test){
+    test.expect(1);
+    
+    //arrange
+    var obj1 = {nombre: "jonas", apellido: "jimenez"};
+//    var obj2 = {nombre: "jonas", apellido: "jimenez"};
+//    var obj3 = {nombre: "jonas", apellido: "jimenez"};
+    var expected1 = true;           
+//    var expected2 = true;
+//    var expected3 = false;
+    
+    //act
+    var prueba1 = ejercicios.deepEqual(obj1,obj1);
+//    var prueba2 = ejercicios.deepEqual(obj2, {nombre: "jonas", apellido: "jimenez"});
+//    var prueba3 = ejercicios.deepEqual(obj3, {nombre:"jonas", object: 2});
+    //assert
+    test.deepEqual(prueba1,expected1,"comparando dos objetos");
+//    test.deepEqual(prueba2,expected2,"comparando dos objetos un obj y uno anonimo igual");
+//    test.deepEqual(prueba3,expected3,"comparando dos objetos diferentes");
+    test.done();
+}
+exports.deepEqualObjetosIgualesPeroNoLaMismaReferencia = function(test){
+     test.expect(1);
+    
+     //arrange
+     var obj = {nombre: "jonas", apellido: "jimenez"};
+     var expected = true;
+     //act
+     var prueba = ejercicios.deepEqual(obj, {nombre: "jonas", apellido: "jimenez"});
+     //assert
+     test.equal(prueba,expected,"comparando dos objetos iguales pero diferente referencia");
+     test.done();
+ }

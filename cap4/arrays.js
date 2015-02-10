@@ -81,31 +81,28 @@ exports.nth = function(list, n) {//returns the element at given position in the 
 }
 
 //takes two values and returns true only if they are the same value or are objects with the same properties whose valuesare also equal when compared with a recursive call to deepEqual .
-// function deepEqual(a, b) {
-//   if (a === b) return true;//checa si son iguales en tipo  y valor.
+exports.deepEqual = function (a, b) {
+   if (a === b) return true;//checa si son iguales en tipo  y valor.
   
-//   if (a == null || typeof a != "object" ||//si no son objetos return false
-//       b == null || typeof b != "object")
-//     return false;
+   if (a == null || typeof a != "object" ||//si no son objetos return false
+       b == null || typeof b != "object")
+     return false;
   
-//   var conteoPropiedadesEnObjetoA = 0, conteoPropiedadesEnObjetoB = 0;
+   var conteoPropiedadesEnObjetoA = 0, conteoPropiedadesEnObjetoB = 0;
 
-//   for (var propiedad in a)
-//     conteoPropiedadesEnObjetoA += 1;//si es true, agregar uno al conteo.
+   for (var propiedad in a)
+     conteoPropiedadesEnObjetoA += 1;//si es true, agregar uno al conteo.
 
-//   for (var propiedad in b) {
-//     conteoPropiedadesEnObjetoB += 1;
+   for (var propiedad in b) {
+     conteoPropiedadesEnObjetoB += 1;
     
-//     if (!(propiedad in a) || !deepEqual(a[propiedad], b[propiedad]))//checa si prop actual esta en a o los valores son iguales.
-//       return false;
-//   }
+     if (!(propiedad in a) || !deepEqual(a[propiedad], b[propiedad]))//checa si prop actual esta en a o los valores son iguales.
+       return false;
+   }
 
-//   return conteoPropiedadesEnObjetoA == conteoPropiedadesEnObjetoB;//cuenta que tengan el mismo numero de propiedades.
-// } 
-// var obj = {nombre: "jonas", apellido: "jimenez"};
-//console.log(deepEqual(obj, obj));
-// → true
-// console.log(deepEqual(obj, {nombre: "jonas", apellido: "jimenez"}));
-// → false
-//console.log(deepEqual(obj, {nombre:"jonas", object: 2}));
-// → true
+   return conteoPropiedadesEnObjetoA == conteoPropiedadesEnObjetoB;//cuenta que tengan el mismo numero de propiedades.
+ }
+ 
+//    var obj2 = {nombre: "jonas", apellido: "jimenez"};
+//    console.log(deepEqual(obj2, {nombre: "jonas", apellido: "jimenez"}));
+    
