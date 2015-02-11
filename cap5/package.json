@@ -1,0 +1,14 @@
+{
+  "name": "cap5",
+  "version": "0.1.0",
+  "description": "capitulo5",
+  "main": "HiOrderF.js",
+  "scripts": {
+    "test": "node --harmony $(which nodeunit)  test5/"
+  },
+  "keywords": [
+    "cap4"
+  ],
+  "author": "jonasnahum",
+  "license": "ISC"
+}
