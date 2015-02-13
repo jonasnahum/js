@@ -1,0 +1,14 @@
+{
+  "name": "cap6",
+  "version": "0.1.0",
+  "description": "capitulo 6",
+  "main": "secretObjects.js",
+  "scripts": {
+    "test": "node --harmony $(which nodeunit) test6/"
+  },
+  "keywords": [
+    "capitulo6"
+  ],
+  "author": "jonasnahum",
+  "license": "ISC"
+}
