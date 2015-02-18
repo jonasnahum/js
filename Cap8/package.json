@@ -1,0 +1,15 @@
+{
+  "name": "Cap8",
+  "version": "0.1.0",
+  "description": "capitulo 8",
+  "main": "BugsErrors.js",
+  "scripts": {
+    "test": "node --harmony $(which nodeunit) test8/"
+  },
+  "keywords": [
+    "capitulo",
+    "8"
+  ],
+  "author": "jonasnahum",
+  "license": "ISC"
+}
